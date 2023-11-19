@@ -1,0 +1,45 @@
+
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
+
+server:
+  port: 8585
+
+
+# Uncomment and adjust the following lines if needed
+#spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: http://localhost:8484/auth/realms/techno-park
+#      client:
+#        provider:
+#          keycloak:
+#            issuer-uri: http://localhost:8484/realms/techno-park
+#        registration:
+#          keycloak:
+#            provider: keycloak
+#            client-id: techno-park
+#            client-secret: GLmtl84N04UarVC1vzKfZmKYlFvxElwD
+#            authorization-grant-type: authorization_code
+#            scope: openid
