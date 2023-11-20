@@ -1,5 +1,4 @@
 
-
 spring:
   application:
     name: api-gateway
@@ -23,6 +22,7 @@ eureka:
 
 server:
   port: 8585
+  address: 0.0.0.0
 
 
 # Uncomment and adjust the following lines if needed
